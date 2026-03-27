@@ -1,1 +1,37 @@
 Introducción a las Estructuras de Datos
+
+Las estructuras de datos son formas de organizar y almacenar información en una computadora para acceder, modificar y gestionar datos de manera eficiente.
+
+Tipos de estructuras de datos
+1. Estáticas
+
+No cambian de tamaño durante la ejecución del programa.
+
+Array (arreglo):
+Conjunto de elementos del mismo tipo almacenados en posiciones contiguas. Se accede a cada elemento mediante un índice.
+Matriz:
+Es un arreglo de dos o más dimensiones, útil para representar datos en forma de tabla (filas y columnas).
+2. Dinámicas
+
+Pueden cambiar de tamaño durante la ejecución.
+
+a) Lineales
+
+Los elementos están organizados en secuencia.
+
+Lista enlazada:
+Conjunto de nodos donde cada uno contiene un dato y una referencia al siguiente nodo.
+Pila (Stack):
+Estructura que sigue el principio LIFO (Last In, First Out), donde el último elemento en entrar es el primero en salir.
+Cola (Queue):
+Estructura que sigue el principio FIFO (First In, First Out), donde el primer elemento en entrar es el primero en salir.
+b) No lineales
+
+Los elementos no siguen un orden secuencial.
+
+Árbol:
+Estructura jerárquica compuesta por nodos, donde existe un nodo raíz y nodos hijos.
+Grafo:
+Conjunto de nodos (vértices) conectados por enlaces (aristas), que pueden tener dirección o no.
+Tabla hash:
+Estructura que almacena datos en pares clave-valor y usa una función hash para ubicar rápidamente los datos.
