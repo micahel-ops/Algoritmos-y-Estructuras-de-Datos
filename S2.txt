@@ -1,0 +1,48 @@
+Sesión 2: Estructuras de Datos y Memoria
+
+Una estructura de datos es una forma de organizar y almacenar información en memoria para que sea fácil de usar y acceder. Su objetivo principal es mejorar la eficiencia en el manejo de datos.
+
+Lo más importante:
+
+Permite organizar los datos de forma lógica.
+Optimiza el uso de la memoria.
+Facilita el acceso rápido a la información.
+
+Tipos de almacenamiento:
+
+Estático: memoria asignada en tiempo de compilación, tamaño fijo, acceso rápido, poca flexibilidad.
+Dinámico: memoria asignada en tiempo de ejecución, tamaño variable, mayor flexibilidad, requiere control manual.
+
+Idea clave: la elección entre memoria estática o dinámica depende de la necesidad de flexibilidad y rendimiento.
+
+Sesión 4: Operaciones Básicas en Arreglos Unidimensionales
+
+Un arreglo es una estructura de datos lineal que almacena elementos del mismo tipo en posiciones consecutivas de memoria. Tiene tamaño fijo y se accede mediante índices.
+
+Lo más importante:
+
+Índices van de 0 a n-1.
+Acceso directo y rápido.
+Todos los elementos son del mismo tipo.
+
+Operaciones básicas:
+
+Inserción: agregar un elemento en una posición específica.
+Actualización: modificar un valor existente.
+Eliminación: eliminar un elemento y reorganizar el arreglo.
+Recorrido: acceder a todos los elementos de forma secuencial.
+Copia: duplicar el contenido en otro arreglo.
+
+Idea clave: estas operaciones permiten manipular datos dentro del arreglo de forma controlada.
+
+Sesión 6: Operaciones Avanzadas en Arreglos Unidimensionales
+
+Estas operaciones permiten trabajar con arreglos a un nivel más avanzado, enfocándose en análisis y combinación de datos.
+
+Lo más importante:
+
+Comparación: verifica si dos arreglos son iguales en tamaño y contenido.
+Clonación: crea una copia exacta e independiente del arreglo original.
+Fusión: une dos o más arreglos en uno nuevo.
+
+Idea clave: estas operaciones permiten analizar, replicar y combinar estructuras de datos de manera eficiente.
