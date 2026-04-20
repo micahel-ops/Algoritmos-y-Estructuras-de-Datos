@@ -35,3 +35,62 @@ Grafo:
 Conjunto de nodos (vértices) conectados por enlaces (aristas), que pueden tener dirección o no.
 Tabla hash:
 Estructura que almacena datos en pares clave-valor y usa una función hash para ubicar rápidamente los datos.
+Semana 1:
+
+Concepto de estructura de datos: Se entiende como la forma en que se organizan y almacenan los datos para usarlos eficientemente.
+
+Importancia en la programación: Se explica cómo una buena estructura mejora el rendimiento y la lógica de un programa.
+
+Almacenamiento en computadoras: Se analiza cómo la memoria guarda y gestiona la información.
+
+Tipos de estructuras: Se diferencian las estructuras estáticas, dinámicas lineales y no lineales, viendo sus características generales.
+
+
+
+---
+
+Semana 2:
+
+Refuerzo teórico: Se repasan los conceptos básicos para asegurar comprensión sólida.
+
+Aplicación práctica: Se empiezan a resolver ejercicios usando estructuras de datos.
+
+Análisis de problemas: Se aprende a elegir la estructura adecuada según la necesidad del problema.
+
+Ejercicios básicos: Se desarrollan casos simples para afianzar la lógica.
+
+
+
+---
+
+Semana 3:
+
+Arreglos unidimensionales: Se introduce esta estructura como una colección de datos del mismo tipo.
+
+Inserción: Cómo agregar elementos en una posición específica.
+
+Eliminación: Cómo quitar elementos sin afectar la estructura.
+
+Actualización: Modificación de valores dentro del arreglo.
+
+Recorrido: Acceso a todos los elementos mediante ciclos.
+
+Copia: Duplicación de arreglos para trabajar con datos similares.
+
+
+
+---
+
+Semana 4:
+
+Comparación de arreglos: Evaluar similitudes o diferencias entre estructuras.
+
+Clonación: Crear copias exactas de un arreglo.
+
+Fusión: Unir dos arreglos en uno solo.
+
+Arreglos bidimensionales (matrices): Se introduce el manejo de datos en filas y columnas.
+
+Tipos de matrices: Se estudian matrices como triangulares, simétricas y asimétricas.
+
+Aplicaciones: Uso de matrices en problemas más complejos como cálculos y transformaciones.
