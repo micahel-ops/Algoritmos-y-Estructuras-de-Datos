@@ -1,2 +1,191 @@
-Ausencia
-No hubo promesas entre nosotros, solo silencios que decían más que cualquier juramento. Ahora entiendo: algunas personas llegan solo para recordarnos que la vida, cuando ama, siempre duele un poco.
+Operaciones con Arreglos Bidimensionales
+
+Cuando trabajo con arreglos bidimensionales, los entiendo como matrices que me permiten organizar información en forma de tabla, compuesta por filas y columnas. A diferencia de los arreglos unidimensionales, estos me permiten representar relaciones más complejas entre los datos.
+
+Uso matrices en distintos contextos, como matemáticas, ingeniería, informática o análisis de datos, porque me facilitan representar sistemas organizados y estructurados.
+
+Para manejarlas correctamente, necesito comprender bien su estructura, los tipos que existen y las operaciones que puedo realizar sobre ellas.
+
+Matrices Cuadradas
+
+Cuando utilizo matrices cuadradas, trabajo con estructuras donde el número de filas es igual al número de columnas. Esta característica me permite aprovechar propiedades especiales que no encuentro en matrices rectangulares.
+
+Las uso en cálculos más avanzados, como determinantes, matrices inversas o resolución de sistemas de ecuaciones. Además, identifico la diagonal principal, que va desde la esquina superior izquierda hasta la inferior derecha.
+
+Gracias a su estructura, puedo realizar ciertos análisis y operaciones de forma más eficiente, lo que las hace clave en algoritmos más complejos.
+
+Matrices Triangulares
+
+Cuando trabajo con matrices triangulares, utilizo un tipo especial de matriz cuadrada en la que algunos elementos son cero, lo que simplifica tanto su almacenamiento como su procesamiento.
+
+Estas matrices las clasifico según la posición de los ceros, y me resultan útiles en cálculos matemáticos y optimización de memoria.
+
+Matriz Triangular Inferior
+
+Cuando uso una matriz triangular inferior, sé que todos los elementos por encima de la diagonal principal son cero. Esto significa que solo la parte inferior de la matriz contiene valores importantes.
+
+La utilizo cuando solo necesito trabajar con esa parte de la estructura, como en ciertos métodos para resolver sistemas de ecuaciones o en descomposiciones matriciales.
+
+Matriz Triangular Superior
+
+Cuando trabajo con una matriz triangular superior, todos los elementos por debajo de la diagonal principal son cero, por lo que los valores relevantes están en la parte superior.
+
+Este tipo de matriz me ayuda a simplificar cálculos, ya que reduce la cantidad de datos que necesito procesar en distintos algoritmos.
+
+Matriz Tridiagonal
+
+Cuando utilizo una matriz tridiagonal, trabajo con una estructura en la que solo tres diagonales tienen valores distintos de cero: la principal, la superior inmediata y la inferior inmediata.
+
+Este tipo de matriz me permite optimizar el uso de memoria, porque solo almaceno los elementos necesarios en lugar de toda la matriz. La uso en problemas numéricos, simulaciones y métodos computacionales.
+
+Matrices Simétricas y Asimétricas
+
+También clasifico las matrices según la relación de sus elementos con respecto a la diagonal principal.
+
+Matriz Simétrica
+
+Cuando trabajo con una matriz simétrica, sé que es igual a su transpuesta. Esto significa que los elementos se reflejan de manera idéntica respecto a la diagonal principal, cumpliendo que el valor en una posición es igual al de su posición inversa.
+
+Esta propiedad me ayuda a reducir la cantidad de información que necesito almacenar y simplifica ciertos cálculos, por lo que la uso en aplicaciones científicas y de ingeniería.
+
+Matriz Asimétrica
+
+Cuando utilizo una matriz asimétrica, trabajo con una estructura que no cumple la propiedad de simetría. Es decir, los elementos no coinciden al compararlos respecto a la diagonal principal.
+
+
+
+
+
+______________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+
+
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package Semana4;
+
+public class MatricesEspeciales {
+
+    public static void main(String[] args) {
+
+        // 1. DECLARAR MATRICES DE DIFERENTES TIPOS
+
+        int n = 3;
+
+        // Matriz cuadrada
+        int[][] A = {
+            {1, 2, 3},
+            {0, 4, 5},
+            {0, 0, 6}
+        };
+
+        // Matriz triangular inferior
+        int[][] triangularInferior = {
+            {1, 0, 0},
+            {2, 3, 0},
+            {4, 5, 6}
+        };
+
+        // Matriz simétrica
+        int[][] simetrica = {
+            {1, 2, 3},
+            {2, 4, 5},
+            {3, 5, 6}
+        };
+
+        // 2. ACCESO OPTIMIZADO (solo donde hay datos útiles)
+
+        System.out.println("Acceso optimizado (Triangular Inferior):");
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j <= i; j++) { // solo parte útil
+                System.out.print(triangularInferior[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+
+        // 3. OPERACIONES BÁSICAS
+
+        // --- SUMA DE MATRICES ---
+        int[][] B = {
+            {1, 1, 1},
+            {1, 1, 1},
+            {1, 1, 1}
+        };
+
+        int[][] suma = new int[n][n];
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                suma[i][j] = A[i][j] + B[i][j];
+            }
+        }
+
+        System.out.println("\nSuma de matrices:");
+        imprimirMatriz(suma);
+
+
+        // --- MULTIPLICACIÓN DE MATRICES ---
+        int[][] multiplicacion = new int[n][n];
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                for (int k = 0; k < n; k++) {
+                    multiplicacion[i][j] += A[i][k] * B[k][j];
+                }
+            }
+        }
+
+        System.out.println("\nMultiplicación de matrices:");
+        imprimirMatriz(multiplicacion);
+
+
+        // --- TRANSPOSICIÓN ---
+        int[][] transpuesta = new int[n][n];
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                transpuesta[j][i] = A[i][j];
+            }
+        }
+
+        System.out.println("\nMatriz transpuesta:");
+        imprimirMatriz(transpuesta);
+
+
+        // 4. VERIFICACIÓN DE OPTIMIZACIÓN
+
+        System.out.println("\nVerificación de matriz simétrica:");
+
+        boolean esSimetrica = true;
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if (simetrica[i][j] != simetrica[j][i]) {
+                    esSimetrica = false;
+                    break;
+                }
+            }
+        }
+
+        System.out.println("¿Es simétrica? " + esSimetrica);
+    }
+
+
+    // Método para imprimir matrices
+    public static void imprimirMatriz(int[][] matriz) {
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[i].length; j++) {
+                System.out.print(matriz[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+
+
