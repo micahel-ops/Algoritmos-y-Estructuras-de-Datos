@@ -1,96 +1,163 @@
-Introducción a las Estructuras de Datos
+¿Qué es una estructura de datos?
 
-Las estructuras de datos son formas de organizar y almacenar información en una computadora para acceder, modificar y gestionar datos de manera eficiente.
+Entiendo una estructura de datos como una forma organizada de almacenar y gestionar información dentro de una computadora, con el objetivo de facilitar su acceso, modificación y procesamiento. No se trata solo de guardar datos, sino de hacerlo de manera inteligente para que operaciones como buscar, insertar, eliminar o actualizar información se realicen de forma eficiente.
 
-Tipos de estructuras de datos
-1. Estáticas
+En programación, sé que elegir una estructura de datos adecuada influye directamente en el rendimiento del sistema. Si elijo mal, el programa puede volverse lento o consumir más recursos de lo necesario; pero si elijo bien, optimizo tanto el tiempo de ejecución como el uso de memoria.
 
-No cambian de tamaño durante la ejecución del programa.
+¿Cómo se almacenan los datos en una computadora?
 
-Array (arreglo):
-Conjunto de elementos del mismo tipo almacenados en posiciones contiguas. Se accede a cada elemento mediante un índice.
-Matriz:
-Es un arreglo de dos o más dimensiones, útil para representar datos en forma de tabla (filas y columnas).
-2. Dinámicas
+Sé que las computadoras almacenan la información en forma de bits, que son unidades mínimas representadas por valores binarios (0 y 1). Cuando se agrupan 8 bits, se forma un byte, que permite representar datos más complejos como números, letras o símbolos.
 
-Pueden cambiar de tamaño durante la ejecución.
+Estos datos se guardan en distintos tipos de memoria, como la memoria RAM o dispositivos de almacenamiento como discos duros. Pero no basta con almacenar datos; necesito organizarlos correctamente. Aquí es donde uso estructuras de datos, porque me permiten ordenar esos bits y bytes de forma lógica para facilitar su manipulación y acceso.
 
-a) Lineales
+Clasificación de las estructuras de datos
 
-Los elementos están organizados en secuencia.
+Yo clasifico las estructuras de datos principalmente en dos grandes grupos: estáticas y dinámicas. A su vez, las estructuras dinámicas las divido en lineales y no lineales. Esta clasificación depende de cómo organizo la información y de si su tamaño puede cambiar durante la ejecución del programa.
 
-Lista enlazada:
-Conjunto de nodos donde cada uno contiene un dato y una referencia al siguiente nodo.
-Pila (Stack):
-Estructura que sigue el principio LIFO (Last In, First Out), donde el último elemento en entrar es el primero en salir.
-Cola (Queue):
-Estructura que sigue el principio FIFO (First In, First Out), donde el primer elemento en entrar es el primero en salir.
-b) No lineales
+Estructuras de datos estáticas
 
-Los elementos no siguen un orden secuencial.
+Cuando trabajo con estructuras de datos estáticas, defino su tamaño y organización desde el momento de la compilación del programa, y no puedo modificarlas durante su ejecución. Esto significa que el espacio de memoria que ocupan es fijo.
 
-Árbol:
-Estructura jerárquica compuesta por nodos, donde existe un nodo raíz y nodos hijos.
-Grafo:
-Conjunto de nodos (vértices) conectados por enlaces (aristas), que pueden tener dirección o no.
-Tabla hash:
-Estructura que almacena datos en pares clave-valor y usa una función hash para ubicar rápidamente los datos.
-Semana 1:
+Valoro este tipo de estructuras por su simplicidad y rapidez en el acceso a los datos, ya que los elementos se encuentran ubicados de manera contigua en memoria. Sin embargo, también reconozco su principal limitación: la falta de flexibilidad, porque no se adaptan a cambios en la cantidad de datos.
 
-Concepto de estructura de datos: Se entiende como la forma en que se organizan y almacenan los datos para usarlos eficientemente.
+Las utilizo especialmente cuando ya conozco de antemano la cantidad exacta de información que voy a manejar.
 
-Importancia en la programación: Se explica cómo una buena estructura mejora el rendimiento y la lógica de un programa.
+Estructuras de datos dinámicas
 
-Almacenamiento en computadoras: Se analiza cómo la memoria guarda y gestiona la información.
+A diferencia de las estáticas, cuando uso estructuras de datos dinámicas puedo hacer que su tamaño y organización cambien durante la ejecución del programa. Esto me da mucha más flexibilidad, ya que puedo agregar o eliminar elementos según lo necesite.
 
-Tipos de estructuras: Se diferencian las estructuras estáticas, dinámicas lineales y no lineales, viendo sus características generales.
+Estas estructuras me permiten usar la memoria de manera más eficiente cuando no conozco la cantidad de datos desde el inicio. Eso sí, también sé que pueden ser más complejas de implementar y gestionar.
 
+Estructuras de datos dinámicas lineales
 
+Cuando utilizo estructuras dinámicas lineales, organizo los datos de forma secuencial. Es decir, cada elemento tiene un único sucesor y, en algunos casos, un único predecesor. Esto me permite mantener un orden claro entre los elementos y recorrerlos fácilmente uno por uno.
 
----
+Este tipo de estructuras me resulta útil cuando necesito procesar datos en un orden específico. Además, puedo insertar y eliminar elementos con mayor flexibilidad que en las estructuras estáticas.
 
-Semana 2:
+Dentro de este grupo, trabajo con estructuras que siguen principios específicos de organización, especialmente en cómo entran y salen los datos.
 
-Refuerzo teórico: Se repasan los conceptos básicos para asegurar comprensión sólida.
+Estructuras de datos dinámicas no lineales
 
-Aplicación práctica: Se empiezan a resolver ejercicios usando estructuras de datos.
+Cuando trabajo con estructuras dinámicas no lineales, dejo de lado la organización secuencial. En su lugar, estructuro los datos de manera jerárquica o en forma de red, permitiendo múltiples relaciones entre los elementos.
 
-Análisis de problemas: Se aprende a elegir la estructura adecuada según la necesidad del problema.
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
 
-Ejercicios básicos: Se desarrollan casos simples para afianzar la lógica.
+package com.mycompany.estructurasdatos;
+import java.util.*;
 
 
 
----
-
-Semana 3:
-
-Arreglos unidimensionales: Se introduce esta estructura como una colección de datos del mismo tipo.
-
-Inserción: Cómo agregar elementos en una posición específica.
-
-Eliminación: Cómo quitar elementos sin afectar la estructura.
-
-Actualización: Modificación de valores dentro del arreglo.
-
-Recorrido: Acceso a todos los elementos mediante ciclos.
-
-Copia: Duplicación de arreglos para trabajar con datos similares.
+______________________________________________________________________________________________________________________________________________________________________________________________________________________________
 
 
 
----
+public class EstructurasDatos {
 
-Semana 4:
+    public static void main(String[] args) {
 
-Comparación de arreglos: Evaluar similitudes o diferencias entre estructuras.
+        // 1. IDENTIFICAR EL TIPO DE ALMACENAMIENTO REQUERIDO
+        // En este caso usaremos:
+        // - Array (estático)
+        // - Lista (dinámica)
+        // - Pila (LIFO)
+        // - Cola (FIFO)
 
-Clonación: Crear copias exactas de un arreglo.
+        // 2. DECLARAR VARIABLES SEGÚN EL TIPO DE ESTRUCTURA
 
-Fusión: Unir dos arreglos en uno solo.
+        // Estructura estática (Array)
+        int[] arreglo = new int[5];
 
-Arreglos bidimensionales (matrices): Se introduce el manejo de datos en filas y columnas.
+        // Estructura dinámica lineal (Lista)
+        ArrayList<Integer> lista = new ArrayList<>();
 
-Tipos de matrices: Se estudian matrices como triangulares, simétricas y asimétricas.
+        // Pila (Stack - LIFO)
+        Stack<Integer> pila = new Stack<>();
 
-Aplicaciones: Uso de matrices en problemas más complejos como cálculos y transformaciones.
+        // Cola (Queue - FIFO)
+        Queue<Integer> cola = new LinkedList<>();
+
+
+        // 3. IMPLEMENTAR OPERACIONES BÁSICAS DE ACCESO
+
+        // --- ARRAY ---
+        System.out.println("=== ARRAY ===");
+        for (int i = 0; i < arreglo.length; i++) {
+            arreglo[i] = i * 10; // inserción
+        }
+
+        for (int i = 0; i < arreglo.length; i++) {
+            System.out.println("Posición " + i + ": " + arreglo[i]); // acceso
+        }
+
+
+        // --- LISTA ---
+        System.out.println("\n=== LISTA ===");
+        lista.add(100); // inserción
+        lista.add(200);
+        lista.add(300);
+
+        System.out.println("Elemento en posición 1: " + lista.get(1)); // acceso
+
+        lista.remove(0); // eliminación
+        System.out.println("Lista después de eliminar: " + lista);
+
+
+        // --- PILA ---
+        System.out.println("\n=== PILA ===");
+        pila.push(10); // insertar
+        pila.push(20);
+        pila.push(30);
+
+        System.out.println("Elemento en la cima: " + pila.peek()); // acceso
+
+        pila.pop(); // eliminar
+        System.out.println("Pila después de pop: " + pila);
+
+
+        // --- COLA ---
+        System.out.println("\n=== COLA ===");
+        cola.add(1); // insertar
+        cola.add(2);
+        cola.add(3);
+
+        System.out.println("Primer elemento: " + cola.peek()); // acceso
+
+        cola.poll(); // eliminar
+        System.out.println("Cola después de poll: " + cola);
+
+
+        // WARNING: PAUTAS DE SEGURIDAD
+        System.out.println("\n=== SEGURIDAD ===");
+
+        // Verificar límites en arrays
+        int indice = 10;
+        if (indice >= 0 && indice < arreglo.length) {
+            System.out.println(arreglo[indice]);
+        } else {
+            System.out.println("Error: índice fuera de rango");
+        }
+
+        // Verificar si la pila está vacía
+        if (!pila.isEmpty()) {
+            System.out.println("Cima de la pila: " + pila.peek());
+        } else {
+            System.out.println("La pila está vacía");
+        }
+
+        // Verificar si la cola está vacía
+        if (!cola.isEmpty()) {
+            System.out.println("Frente de la cola: " + cola.peek());
+        } else {
+            System.out.println("La cola está vacía");
+        }
+    }
+}
+
+
+
+
+
+1
+
