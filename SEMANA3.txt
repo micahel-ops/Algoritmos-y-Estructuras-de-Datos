@@ -1,2 +1,107 @@
-Ausencia
-Eras traviesa, sí, pero también eras mi ruina más dulce. Todo en ti era peligro, y aun así, no supe —ni quise— escapar. Amar fue perderme en tu mirada y encontrarme, apenas, en tu sombra.
+Operaciones con Arreglos Unidimensionales
+
+Para mí, las operaciones con arreglos unidimensionales son fundamentales en la programación, porque me permiten manipular colecciones de datos de manera eficiente. No solo uso los arreglos para almacenar información, sino también para compararla, duplicarla o combinarla según lo que necesite resolver.
+
+Dominar estas operaciones es clave, ya que me ayuda a gestionar correctamente los datos, mantener su integridad y evitar errores cuando los manipulo.
+
+Comparación de Arreglos
+
+Cuando comparo arreglos unidimensionales, lo que hago es verificar si dos arreglos son iguales o diferentes. Para considerar que son iguales, debo asegurarme de que cumplan dos condiciones: que tengan la misma longitud y que contengan los mismos valores en cada una de sus posiciones.
+
+Para lograrlo, comparo elemento por elemento, revisando cada índice en ambos arreglos. Si todos los valores coinciden, concluyo que los arreglos son iguales; si encuentro alguna diferencia, entonces no lo son.
+
+Esta operación me resulta útil en muchos casos, como cuando valido datos, verifico resultados de algoritmos o detecto cambios entre conjuntos de información.
+
+Clonación de Arreglos
+
+Cuando clono un arreglo, creo una copia exacta del arreglo original, de modo que ambos contienen los mismos valores, pero están almacenados en diferentes espacios de memoria.
+
+Esto es importante para mí cuando necesito trabajar con los datos sin modificar el arreglo original. Así puedo hacer cambios, pruebas o transformaciones sobre la copia sin afectar la información inicial.
+
+La clonación me asegura que ambos arreglos sean independientes, lo cual es fundamental cuando quiero mantener la integridad de los datos a lo largo del programa.
+
+Fusión de Arreglos
+
+Cuando realizo la fusión de arreglos, combino dos o más arreglos unidimensionales en uno solo. Esta operación me permite reunir diferentes conjuntos de datos en una única estructura, facilitando su procesamiento.
+
+La forma más común en la que lo hago es mediante la concatenación, es decir, agregando los elementos de un arreglo después de los del otro, respetando siempre el orden original.
+
+Uso esta operación cuando trabajo con múltiples fuentes de datos que necesito integrar, como listas separadas, resultados parciales o conjuntos de información relacionados.
+
+Importancia de estas operaciones
+
+Considero que las operaciones de comparación, clonación y fusión son esenciales para manejar arreglos de forma eficiente, porque me permiten analizar, conservar y reorganizar los datos según lo que requiera el programa.
+
+
+
+
+______________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+
+
+
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package Semana3;
+
+public class OperacionesArreglos {
+
+    public static void main(String[] args) {
+
+        // 1. DECLARAR DOS ARREGLOS CON DATOS PARA COMPARACIÓN
+        int[] arreglo1 = {10, 20, 30, 40};
+        int[] arreglo2 = {10, 20, 30, 40};
+
+        // 2. COMPARACIÓN ELEMENTO POR ELEMENTO
+        boolean sonIguales = true;
+
+        if (arreglo1.length != arreglo2.length) {
+            sonIguales = false;
+        } else {
+            for (int i = 0; i < arreglo1.length; i++) {
+                if (arreglo1[i] != arreglo2[i]) {
+                    sonIguales = false;
+                    break;
+                }
+            }
+        }
+
+        System.out.println("¿Los arreglos son iguales? " + sonIguales);
+
+
+        // 3. CLONACIÓN DEL ARREGLO ORIGINAL
+        int[] clon = new int[arreglo1.length];
+
+        for (int i = 0; i < arreglo1.length; i++) {
+            clon[i] = arreglo1[i];
+        }
+
+        System.out.println("\nArreglo clonado:");
+        for (int i = 0; i < clon.length; i++) {
+            System.out.print(clon[i] + " ");
+        }
+
+
+        // 4. FUSIÓN DE AMBOS ARREGLOS
+        int[] fusion = new int[arreglo1.length + arreglo2.length];
+
+        int index = 0;
+
+        for (int i = 0; i < arreglo1.length; i++) {
+            fusion[index++] = arreglo1[i];
+        }
+
+        for (int i = 0; i < arreglo2.length; i++) {
+            fusion[index++] = arreglo2[i];
+        }
+
+        // 5. VERIFICAR RESULTADOS
+        System.out.println("\n\nArreglo fusionado:");
+        for (int i = 0; i < fusion.length; i++) {
+            System.out.print(fusion[i] + " ");
+        }
+    }
+}
