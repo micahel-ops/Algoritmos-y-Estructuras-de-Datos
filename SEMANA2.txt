@@ -1,2 +1,121 @@
-Ausencia
-Te fuiste otra vez, como el mar se retira sin avisar. Y aquí quedé yo, con la sal en los labios y la memoria llena de ti. No sé si volverás, pero cada ausencia tuya tiene el sabor de un adiós que no quiero pronunciar.
+Arreglos Unidimensionales
+
+Entiendo un arreglo unidimensional como una estructura de datos estática que me permite almacenar una colección de elementos del mismo tipo en una sola dimensión. Cada elemento está asociado a una posición específica llamada índice, lo que me permite acceder a él de manera directa.
+
+Uso los arreglos unidimensionales con frecuencia debido a su eficiencia en el acceso a los datos. Al estar organizados de forma contigua en memoria, puedo realizar operaciones rápidas y aprovechar mejor la caché del procesador, lo que mejora el rendimiento general del programa.
+
+Me resultan especialmente útiles cuando trabajo con listas de datos homogéneos, como calificaciones, edades o cantidades, donde necesito acceso rápido y procesamiento secuencial de los elementos.
+
+Inserción en Arreglos Unidimensionales
+
+Cuando intento insertar datos en un arreglo unidimensional, me encuentro con una limitación importante: su tamaño es fijo. No puedo agregar nuevos elementos si el arreglo ya alcanzó su capacidad máxima.
+
+Sin embargo, puedo simular una inserción cuando aún hay espacio disponible. Para hacerlo, debo desplazar los elementos existentes hacia la derecha desde la posición donde quiero insertar el nuevo dato. Así evito sobrescribir valores que ya existen.
+
+Sé que esta operación puede costar tiempo, especialmente si inserto al inicio del arreglo, porque tengo que mover varios elementos.
+
+Actualización en Arreglos Unidimensionales
+
+Cuando actualizo un arreglo, simplemente modifico el valor de un elemento en una posición específica. Esta operación me resulta directa y eficiente, ya que solo necesito acceder al índice correspondiente y reemplazar el valor.
+
+Gracias al acceso directo que tengo con los arreglos, realizo esta operación en tiempo constante, lo que la convierte en una de las más rápidas dentro de las estructuras de datos.
+
+Eliminación en Arreglos Unidimensionales
+
+Cuando elimino un elemento de un arreglo unidimensional, sé que su tamaño no se reduce, porque es una estructura estática. En lugar de eliminar el espacio, desplazo los elementos posteriores hacia la izquierda para cubrir la posición que queda vacía.
+
+Con esto mantengo la continuidad de los datos y evito espacios vacíos entre ellos. Aun así, soy consciente de que esta operación también puede tomar tiempo si debo mover muchos elementos.
+
+Recorrido de Arreglos Unidimensionales
+
+Cuando realizo un recorrido de un arreglo, accedo a cada uno de sus elementos de forma secuencial, normalmente desde la primera posición hasta la última.
+
+Esta operación es fundamental para mí, porque me permite mostrar datos, hacer cálculos o aplicar transformaciones sobre los elementos. Además, me resulta sencilla de implementar gracias a la organización ordenada del arreglo.
+
+El recorrido me permite aprovechar la estructura lineal del arreglo y procesar toda la información de manera completa.
+
+Copia de Arreglos Unidimensionales
+
+Cuando copio un arreglo, creo una nueva estructura que contiene los mismos elementos que el arreglo original. Esto es importante para mí cuando necesito trabajar con una versión independiente de los datos sin modificar el original.
+
+Al hacer una copia, aseguro que cualquier cambio en el nuevo arreglo no afecte al original, lo cual es clave cuando quiero mantener la integridad de la información inicial.
+
+Dependiendo de cómo lo haga, puedo copiar elemento por elemento o usar métodos que optimicen este proceso.
+
+Importancia de los Arreglos Unidimensionales
+
+Considero que los arreglos unidimensionales son una de las estructuras más fundamentales en programación, porque me ayudan a entender estructuras más complejas.
+
+Su mayor ventaja para mí es la rapidez de acceso a los datos y la eficiencia en el uso de memoria. Además, me permiten realizar operaciones matemáticas y lógicas de forma sencilla gracias a su organización secuencial.
+
+Aunque tienen limitaciones en cuanto a flexibilidad, sigo utilizándolos como una herramienta esencial cuando trabajo con datos de tamaño conocido y necesito un acceso rápido y directo.
+
+
+
+______________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package Semana2;
+
+public class ArregloUnidimensional {
+
+    public static void main(String[] args) {
+
+        // 1. DECLARAR UN ARREGLO UNIDIMENSIONAL DE TAMAÑO DEFINIDO
+        int[] arreglo = new int[6]; // tamaño fijo
+        int tamaño = 3; // cantidad de elementos usados inicialmente
+
+        // Valores iniciales
+        arreglo[0] = 10;
+        arreglo[1] = 20;
+        arreglo[2] = 30;
+
+        // 2. INSERTAR EN POSICIÓN ESPECÍFICA
+        int posicionInsertar = 1;
+        int nuevoValor = 15;
+
+        if (tamaño < arreglo.length) {
+            for (int i = tamaño; i > posicionInsertar; i--) {
+                arreglo[i] = arreglo[i - 1]; // desplazamiento a la derecha
+            }
+            arreglo[posicionInsertar] = nuevoValor;
+            tamaño++;
+        } else {
+            System.out.println("No hay espacio para insertar");
+        }
+
+        // 3. ACTUALIZAR ELEMENTOS EXISTENTES
+        int posicionActualizar = 2;
+        int nuevoValorActualizado = 25;
+
+        if (posicionActualizar >= 0 && posicionActualizar < tamaño) {
+            arreglo[posicionActualizar] = nuevoValorActualizado;
+        } else {
+            System.out.println("Posición inválida para actualizar");
+        }
+
+        // 4. RECORRER COMPLETAMENTE EL ARREGLO
+        System.out.println("Recorrido del arreglo:");
+        for (int i = 0; i < tamaño; i++) {
+            System.out.println("Posición " + i + ": " + arreglo[i]);
+        }
+
+        // 5. COPIAR A OTRO ARREGLO
+        int[] copia = new int[tamaño];
+
+        for (int i = 0; i < tamaño; i++) {
+            copia[i] = arreglo[i];
+        }
+
+        // Mostrar copia
+        System.out.println("\nArreglo copiado:");
+        for (int i = 0; i < copia.length; i++) {
+            System.out.println("Posición " + i + ": " + copia[i]);
+        }
+    }
+}
