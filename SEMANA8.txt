@@ -1,1 +1,15 @@
+Lista Enlazada Simple
 
+La lista enlazada simple es una estructura de datos dinámica formada por una secuencia de nodos, donde cada nodo contiene un dato y una referencia al siguiente nodo. A diferencia de otras estructuras como los arreglos, no requiere un tamaño fijo, lo que le permite adaptarse de manera flexible a la cantidad de elementos almacenados.
+
+Cada nodo posee dos componentes fundamentales: el dato, que representa la información almacenada, y el enlace o referencia, que apunta al siguiente nodo en la lista. La estructura comienza en un nodo denominado cabeza (head), y el último nodo apunta a null, indicando el final de la lista.
+
+Entre las operaciones básicas se encuentra el recorrido, que consiste en acceder a cada nodo desde el inicio hasta el final, permitiendo visualizar o procesar todos los datos. La búsqueda implica recorrer la lista hasta encontrar un nodo con un valor específico, devolviendo un resultado verdadero o falso dependiendo de si el elemento existe.
+
+La inserción puede realizarse en distintas posiciones. Insertar al inicio es una operación eficiente, ya que solo requiere actualizar la referencia de la cabeza. Insertar al final o en una posición específica implica recorrer la lista hasta encontrar el punto adecuado. De manera similar, la eliminación puede realizarse al inicio, al final o por valor, ajustando las referencias para mantener la continuidad de la lista.
+
+Un aspecto importante es el ordenamiento, donde se pueden aplicar algoritmos como el método burbuja. Este compara nodos consecutivos e intercambia sus valores si están en desorden, repitiendo el proceso hasta que la lista esté completamente ordenada.
+
+En términos de eficiencia, las listas enlazadas simples destacan en operaciones de inserción y eliminación, ya que no requieren desplazar elementos como en los arreglos. Sin embargo, presentan desventajas en operaciones como el acceso directo o la búsqueda, ya que requieren recorrer la lista nodo por nodo.
+
+En conclusión, la lista enlazada simple es una estructura fundamental en programación, ideal para escenarios donde los datos cambian constantemente. Su simplicidad y flexibilidad la convierten en una herramienta clave para desarrollar soluciones eficientes y escalables.
