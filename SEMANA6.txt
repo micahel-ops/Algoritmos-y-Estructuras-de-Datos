@@ -1,1 +1,16 @@
+Tipos Abstractos de Datos (TAD) y Estructuras de Datos Dinámicas
+
+Las estructuras de datos dinámicas son aquellas que pueden modificar su tamaño durante la ejecución de un programa, creciendo o decreciendo según las necesidades. A diferencia de las estructuras estáticas, ofrecen mayor flexibilidad y eficiencia en la gestión de memoria, lo que las hace fundamentales para resolver problemas donde el volumen de datos no es fijo o predecible.
+
+Un Tipo Abstracto de Datos (TAD) es un modelo conceptual que define un conjunto de datos junto con las operaciones que se pueden realizar sobre ellos, sin especificar cómo se implementan. Su objetivo principal es separar el “qué hace” del “cómo se hace”, permitiendo diseñar sistemas más modulares, reutilizables y fáciles de mantener.
+
+Los elementos clave de un TAD incluyen: el dominio de valores (todos los posibles datos que puede contener), las operaciones (como insertar, eliminar o buscar), la especificación formal (definición precisa mediante notación matemática), y la implementación (traducción a código en un lenguaje de programación).
+
+La especificación de un TAD puede ser informal o formal. La especificación informal describe el comportamiento en lenguaje natural, facilitando la comprensión inicial. Por otro lado, la especificación formal utiliza conceptos como precondiciones (lo que debe cumplirse antes de una operación), postcondiciones (lo que se garantiza después) e invariantes (propiedades que siempre se mantienen), logrando mayor precisión y rigor.
+
+Un ejemplo clásico de TAD es la pila (stack), que sigue el principio LIFO (Last In, First Out). Sus operaciones principales son: push (insertar), pop (eliminar), top (consultar el elemento superior) e isEmpty (verificar si está vacía). En su especificación formal, se establece que no se puede hacer pop o top si la pila está vacía, y que cada inserción coloca el elemento en la parte superior.
+
+Finalmente, la implementación de un TAD consiste en elegir una estructura de datos adecuada, como arreglos o listas enlazadas, para materializar sus operaciones. Esta separación entre concepto e implementación permite desarrollar software más escalable, mantenible y adaptable a diferentes contextos.
+
+En conclusión, los TAD y las estructuras dinámicas son herramientas esenciales en la programación moderna, ya que permiten organizar y manipular grandes volúmenes de información de manera eficiente, manteniendo claridad, orden y capacidad de evolución en los sistemas.
 
