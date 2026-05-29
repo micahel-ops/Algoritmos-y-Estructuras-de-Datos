@@ -1,1 +1,17 @@
+Listas Doblemente Enlazadas y Listas Circulares
 
+Las listas doblemente enlazadas y las listas circulares son estructuras de datos dinámicas que amplían las capacidades de las listas enlazadas simples, ofreciendo mayor flexibilidad en el manejo y recorrido de los datos.
+
+Una lista doblemente enlazada es una estructura en la que cada nodo contiene tres elementos: el dato, un puntero al siguiente nodo (next) y un puntero al nodo anterior (prev). Esta característica permite recorrer la lista en ambas direcciones, lo que resulta especialmente útil en aplicaciones donde se requiere navegación bidireccional, como historiales, editores de texto o sistemas de navegación.
+
+Las operaciones básicas incluyen inserción, eliminación y recorrido. En la inserción, es necesario ajustar tanto el puntero next como el prev de los nodos involucrados. Por ejemplo, al insertar un nodo al inicio, el nuevo nodo apunta al antiguo primero, y este actualiza su puntero previo hacia el nuevo nodo. En la eliminación, se deben reconectar los nodos adyacentes, asegurando que sus referencias no queden rotas. Esto hace que la manipulación sea más compleja que en una lista simple, pero también más potente.
+
+El recorrido puede realizarse hacia adelante utilizando el puntero next o hacia atrás utilizando el puntero prev, lo que representa una ventaja clave frente a las listas simples. Sin embargo, esta estructura requiere mayor uso de memoria debido al almacenamiento de dos referencias por nodo.
+
+Por otro lado, las listas circulares son una variante en la que el último nodo no apunta a null, sino que se enlaza nuevamente con el primer nodo, formando un ciclo. Esto permite recorridos continuos sin necesidad de reiniciar desde el inicio, lo que es ideal en aplicaciones como sistemas de turnos, reproducción cíclica de datos o estructuras repetitivas.
+
+En las listas circulares, las operaciones de inserción y eliminación requieren especial cuidado, ya que es necesario mantener la conexión entre el último nodo y el primero. Por ejemplo, al insertar al inicio, se debe actualizar el puntero del último nodo para que apunte al nuevo nodo. Asimismo, el recorrido se realiza hasta volver al nodo inicial, evitando ciclos infinitos mediante condiciones de control.
+
+En términos de utilidad, las listas doblemente enlazadas son preferibles cuando se necesita acceso bidireccional eficiente, mientras que las listas circulares son ideales para procesos repetitivos o continuos. Ambas estructuras mejoran la flexibilidad frente a listas simples, aunque implican mayor complejidad en su implementación.
+
+En conclusión, estas estructuras representan una evolución de las listas enlazadas, proporcionando soluciones más avanzadas para problemas específicos. Su correcta implementación permite optimizar el manejo de datos en aplicaciones que requieren eficiencia, continuidad y navegación flexible.
