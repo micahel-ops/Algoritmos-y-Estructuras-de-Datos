@@ -1,1 +1,15 @@
+Listas Enlazadas
 
+Las listas enlazadas son estructuras de datos dinámicas que permiten almacenar y gestionar colecciones de elementos sin necesidad de definir un tamaño fijo. A diferencia de los arreglos, su principal ventaja es la flexibilidad, ya que pueden crecer o reducirse durante la ejecución del programa según la cantidad de datos que se necesite manejar.
+
+Una lista enlazada está formada por nodos, donde cada nodo contiene dos componentes fundamentales: un dato, que representa la información almacenada, y un apuntador (o referencia), que indica la dirección del siguiente nodo en la estructura. El primer nodo se denomina cabeza (head), y el último nodo apunta a null, lo que señala el final de la lista.
+
+Existen diferentes tipos de listas enlazadas. La lista enlazada simple, en la que cada nodo apunta únicamente al siguiente; la lista doblemente enlazada, donde cada nodo tiene referencias tanto al nodo anterior como al siguiente; y la lista circular, en la cual el último nodo apunta nuevamente al primero, formando un ciclo continuo.
+
+Las listas enlazadas son especialmente útiles en situaciones donde se requiere insertar o eliminar elementos con frecuencia, ya que estas operaciones no implican el desplazamiento de otros elementos, como ocurre en los arreglos. Esto permite una manipulación más eficiente de los datos, especialmente en estructuras dinámicas.
+
+Entre las operaciones básicas destacan la inserción y la eliminación. La inserción puede realizarse al inicio, al final o en una posición específica. Insertar al inicio implica crear un nuevo nodo y hacer que apunte al nodo cabeza actual, actualizando luego la cabeza. Insertar al final requiere recorrer la lista hasta el último nodo y enlazar el nuevo nodo. Por otro lado, la eliminación consiste en ajustar los apuntadores para excluir el nodo deseado, ya sea al inicio, al final o por valor específico.
+
+En términos de implementación, las listas enlazadas se desarrollan utilizando clases o estructuras que representan nodos y la propia lista. A través de métodos como insertar y eliminar, se controla el comportamiento de la estructura, garantizando su correcto funcionamiento.
+
+En conclusión, las listas enlazadas son una herramienta fundamental en la programación, ya que ofrecen una forma eficiente y flexible de manejar datos dinámicos. Su uso mejora el rendimiento en operaciones frecuentes de inserción y eliminación, y contribuye al desarrollo de software más adaptable y escalable.
